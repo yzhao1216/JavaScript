@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .s1 {
+            font-style: italic;
+        }
+    </style>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        function f1() {
+            // alert($('#d1').html());
+            /*
+             html()相当于innerHTML属性，
+             */
+            $('#d1').html('hello kitty');
+        }
+        function f2() {
+            //只选择文本，标记不管
+            //text() 方法相当与innerText属性，innerText属性有兼容性问题。
+            alert($('#d1').text());
+
+        }
+        function f3() {
+            //查找 修改属性值
+            //alert($('#d1').attr('id'));
+//            $('#d1').attr('style', 'color:red;font-size:40px');
+//            $('#d1').attr('class', 's1');
+            //合并
+            // $('#d1').attr('style','color:red;font-size:40px').attr('class','s1');
+
+            //还可以用json格式
+            $('#d1').attr({'style':'color:red','class':'s1'});
+        }
+        function f4(){
+            //val()方法 读取value属性的值 或 修改
+            //alert($(':input').val());
+
+            $(':input').val('Tom');
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <div id="d1"><span>hello jQuery</span></div>
+    username:<input name="username"><br>
+    <a href="javascript:;" onclick="f4()">click</a>
+
+
+</body>
+</html>

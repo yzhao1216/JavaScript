@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        $(function(){
+            $('#a1').click(f5);
+        });
+
+        function f5(){
+            var $obj = $('#u1 li');
+            var arr = $obj.get();
+            arr[1].innerHTML='hello';
+        }
+        function f4(){
+            var $obj = $('#u1 li');
+            var $o = $obj.get(1);
+            var i = $obj.index($o);
+            alert(i);
+        }
+
+        function f3(){
+            var $obj = $('#u1 li');
+            var o = $obj.get(1);
+            $(o).css('font-size','40px');
+
+        }
+
+        function f2(){
+            var $obj = $('#u1 li');
+            var $o = $obj.eq(1);
+            $o.css('font-size','30px');
+
+        }
+        function f1(){
+            var $obj = $('#u1 li');
+            //$obj.css('font-size','50px');
+            $obj.each(function(i){
+                //i表示正在被遍历的节点下标，从0开始
+                if(i==1){
+                    //this 正在被遍历的节点
+                    $(this).css('font-size','60px');
+                }else if(i==0){
+                    $(this).css('font-size','30px');
+
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+
+    <ul id="u1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <a href="javascript:;"id="a1">clickMe</a><br>
+
+
+</body>
+</html>

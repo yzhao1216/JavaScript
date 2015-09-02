@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        function f1(){
+            //找到被隐藏的
+            //$('div:hidden').css('display','block');
+            $('div:hidden').show('slow');
+        }
+        function f2(){
+            //把显示的div隐藏
+            $('div:visible').hide('slow');
+        }
+    </script>
+</head>
+<body>
+    <div>hello jQuery</div>
+    <div style="display: none">hello java</div>
+    <a href="javascript:;" onclick="f2()">click</a>
+
+
+
+
+
+</body>
+</html>

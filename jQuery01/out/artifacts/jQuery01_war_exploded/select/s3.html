@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        function f1(){
+            //表示把table的第一个tr挑出来
+            //last,even,odd
+            //
+            //
+            //
+            // ,eq(index)
+            $('table tr:first').css('background-color','#cccccc');
+            $('tbody tr:even').css('background-color','#fff8dc');
+            $('tbody tr:odd').css('background-color','#eee7ab');
+        }
+        function f2(){
+            //先找到tr 再改tr中的第二个td
+            $('tbody tr:eq(1) td:eq(1)').css('background-color','#ead7b3');
+        }
+        function f3(){
+            //找到tbody中所有tr，排除#jack
+            $('tbody tr:not(#jack)').css('background-color','#eee7ab');
+
+        }
+    </script>
+</head>
+<body>
+<div>hello jQuery</div>
+    <table width="60%" border="1" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr><td>name</td><td>age</td></tr>
+        </thead>
+        <tbody>
+            <tr><td>Tom</td><td>12</td></tr>
+            <tr id="jack"><td>Jack</td><td>21</td></tr>
+            <tr><td>soo</td><td>34</td></tr>
+            <tr><td>gsd</td><td>11</td></tr>
+        </tbody>
+    </table>
+
+
+    <a href="javascript:;" onclick="f3()">click</a>
+
+
+</body>
+</html>

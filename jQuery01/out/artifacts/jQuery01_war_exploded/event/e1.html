@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .s1 {
+            font-style: italic;
+        }
+    </style>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+
+        function f1(e){
+            /*
+            e 事件对象，通过事件对象找到事件源
+            ie浏览器：var obj = e.srcElement;
+             */
+            var obj = e.target;
+            alert(obj.innerHTML);
+
+
+        }
+        function f2(e){
+            alert(e.clientX+","+ e.clientY);
+        }
+    </script>
+</head>
+<body>
+<div id="d1"><span>hello jQuery</span></div>
+    <!--打印连接描述-->
+    <a href="javascript:;" onclick="f2(event)">click1</a><br>
+    <a href="javascript:;"onclick="f1(event)">click2</a><br>
+
+<a href="javascript:;" onclick="f1(event)">click3</a><br>
+<a href="javascript:;"onclick="f1(event)">click4</a>
+
+
+
+</body>
+</html>

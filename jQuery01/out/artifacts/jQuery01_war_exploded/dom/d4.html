@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .s1 {
+            font-style: italic;
+        }
+    </style>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        function f1() {
+            $('ul li:eq(1)').remove();
+
+        }
+        function f2() {
+            $('ul li:eq(1)').empty();
+        }
+
+
+    </script>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<a href="javascript:;" onclick="f2()">click</a>
+
+
+
+</body>
+</html>

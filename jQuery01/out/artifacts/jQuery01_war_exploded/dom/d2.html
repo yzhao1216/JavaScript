@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .s1 {
+            font-style: italic;
+        }
+    </style>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        function f1() {
+            //创建一个div
+            var $obj= $('<div>用来拖地可好</div>');
+            //添加到dom树,append 作为body的最后一个孩子
+            $('body').append($obj);
+
+        }
+        //append会自动将里面的内容变成jQuery对象
+        function f2(){
+            $('body').append('<div>用来拖地可好</div>');
+        }
+        function f3(){
+            $('body').prepend('<div>用来拖地可好</div>');
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+<a href="javascript:;" onclick="f3()">待我长发及腰下一句？</a>
+
+
+</body>
+</html>

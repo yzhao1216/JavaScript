@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .s1 {
+            font-style: italic;
+        }
+    </style>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        $(function(){
+            $('#u1 li:eq(2)').click(function(){
+                //this:绑定了单击事件处理函数的那个dom对象
+                $(this).css('font-style','italic');
+            });
+
+            $('#a1').click(function(){
+                var $obj = $('#u1 li:eq(2)').clone(true);
+                $('#u1').append($obj);
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="d1">hello jQuery</div>
+    <ul id="u1">
+        <li>item1</li>
+        <li>item2</li>
+        <li>itme3</li>
+    </ul>
+    <a href="javascript:;" id="a1">click</a>
+
+
+</body>
+</html>

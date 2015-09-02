@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #aa1{
+            font-size: 50px;
+            color: red;
+
+        }
+        #atips{
+            font-size: 50px;
+            background-color: mediumseagreen;
+        }
+    </style>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        //让文本输入框产生 获得焦点事件
+       $(function(){
+           $('#a1').click(function(){
+              // $('#username').trigger('focus');
+               $('#username').focus();
+           });
+       });
+    </script>
+</head>
+<body>
+    username:<input name="username" id="username"><br>
+    <a href="javascript:;"id="a1">当我长发及腰</a><br>
+
+
+
+</body>
+</html>

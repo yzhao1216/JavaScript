@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .s1 {
+            font-style: italic;
+        }
+        .s2{
+            font-size: 40px;
+        }
+    </style>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        $(function(){
+           $('#a1').click(f7);
+        });
+        function f1(){
+            var $obj = $('#d1').children();
+            //length属性：返回jQuery对象
+            //包含的dom对象的个数。
+            //alert($obj.length)
+            $obj.css('font-size','60px');
+        }
+        function f2(){
+            //找到d1中所有是div的孩子
+            var $obj = $('#d1').children('div');
+            $obj.css('font-size','60px');
+
+        }
+        function f3(){
+            //.sibling方法执行完以后，节点跳到其他兄弟身上，形成一个jQuery对象
+            $('#d3').siblings().css('font-size','50px');
+        }
+        function f4(){
+            $('#d3').prev().css('font-size','60px');
+        }
+        function f5(){
+            $('#d3').next().css('font-size','60px');
+        }
+        function f6(){
+           alert($('#d3').parent().attr('id'));
+        }
+        function f7(){
+            $('#d1').find('p').css('font-size','50px');
+        }
+
+
+    </script>
+</head>
+<body>
+    <div id="d1">hello jQuery
+        <div id="d2">hello d2</div>
+        <div id="d3">hello d3</div>
+        <div id="d4">hello d4</div>
+        <p>hello p</p>
+    </div>
+
+    <a href="javascript:;" id="a1">click</a>
+
+
+</body>
+</html>

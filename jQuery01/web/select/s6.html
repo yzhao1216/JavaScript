@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        function f1(){
+            //具有id属性的div
+            $('div[id]').css('font-size','50px');
+        }
+        function f2(){
+            //具有id属性的div
+            $('div[id=d1]').css('font-size','50px');
+        }
+        function f3(){
+            //具有id属性的div
+            $('div[id!=d1]').css('font-size','50px');
+        }
+
+    </script>
+
+</head>
+<body>
+    <div id="d1">hello jQuery</div>
+    <div >hello java</div>
+    <a href="javascript:;" onclick="f3()">click</a>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #tips{
+            width: 300px;
+            height: 40px;
+            background-color: aqua;
+            display: none;
+        }
+
+    </style>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        $(function(){
+            $('#a1').toggle(f1,f2);
+        });
+        function f1(){
+            $('#tips').show(800,function(){
+                alert('I am coming');
+            });
+
+        }
+        function f2(){
+            $('#tips').hide('800');
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <a href="javascript:;"id="a1">如何学好java</a><br>
+    <div id="tips">要培养自己的兴趣</div>
+
+
+</body>
+</html>

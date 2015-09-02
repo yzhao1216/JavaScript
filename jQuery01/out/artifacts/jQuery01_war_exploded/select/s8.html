@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        function f1() {
+            //
+            //$('#form1 input:disabled').css('border', '1px dotted red');
+            // disabled为false表示可用
+            $('#form1 input:disabled').attr('disabled',false);
+        }
+        function f2(){
+            $('#form1 input:enabled').attr('disable',true);
+        }
+        function f3(){
+            //val方法
+            var v1=$('#form2 input:checked').val();
+            alert(v1);
+        }
+        function f4(){
+            //form3里面所有的option后代中被selected的选出来，val
+            var v1=$('#form3 option:selected').val();
+            alert(v1);
+        }
+
+    </script>
+
+</head>
+<body>
+    <form id="form1">
+        username:<input name="username"><br>
+        name:<input name="name" disabled="disabled">
+        <input type="button" value="click">
+    </form>
+    <form id="form2">
+        gender:M<input type="radio" name="gender" value="m" checked="m">
+        F<input type="radio" name="gender" value="f">
+    </form>
+    <form id="form3">
+        <select id="s1">
+            <option value="bj">北京</option>
+            <option value="sh" selected="selected">SH</option>
+            <option value="gz">GZ</option>
+        </select>
+    </form>
+
+<a href="javascript:;" onclick="f4()">click</a>
+
+
+</body>
+</html>

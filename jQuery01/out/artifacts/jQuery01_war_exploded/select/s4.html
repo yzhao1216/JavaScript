@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-1.4.3.js"></script>
+    <script>
+        function f1(){
+            $('div:contains(梦想)').css('font-style','italic');
+        }
+        function f2(){
+            //找到空节点，插入数据
+            $('div:empty').html('马云说的');
+        }
+        function f3(){
+            $('div:parent').css('font-style','italic');
+        }
+        function f4(){
+            //div中包含span的
+            $('div:has(span)').css('color','red');
+        }
+
+    </script>
+</head>
+<body>
+
+    <div>人总要有点梦想</div>
+    <div></div>
+    <div>
+        <span>万一实现了呢</span>
+    </div>
+
+    <a href="javascript:;" onclick="f4()">click</a>
+
+
+</body>
+</html>
